@@ -57,7 +57,7 @@ const userSchema = (sequelize, DataTypes) => {
     // the parsed token payload, we are parsing the data using the Secret Key.
     // then find a user that has the data from the payload
     console.log(parsedToken);
-    const user = await this.findOne({ where: { userName: parsedToken.userName } });////###################
+    const user = await this.findOne({ where: { userName: parsedToken.userName } });
     // if there is, then get the user model
     if (user) {
       return user;
